@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+	</head>
+
+	<body>
+		<header style="height: 70px">
+			<a href="./index.html">
+				<div class="logo">
+					<h1>MyMento</h1>
+				</div>
+			</a>
+				
+			<div class="menu">
+				<nav class="navigation">
+					<ul>
+						<!---href value set to html files due to conveniency--->
+						<li><a href="./info.html">AboutUs</a></li>
+						<li><a href="./mentor.html">Mentor</a></li>
+						<li><a href="./support.html">Support</a></li>
+					</ul>
+				</nav>
+			</div>
+				
+			<div class="login_signup">
+				<nav class="login_signup_button_panel">
+					<a href="#" class="login-button">Log In</a>
+					<a href="./register.html" class="signup-button">Sign Up</a>
+				</nav>			
+			</div>
+		</header>
+
+		<!-- JS ?? -->
+		<div class="login-panel">
+			<div class="inner">
+				<div class="login-panel-close">			
+				</div>
+				<div class="clearfix">
+					<div class = "login-form-panel">	
+						<form class="login-form" action="login.php" method="post">
+							<h3 style="text-align:center">Login to Malcha</h3>
+							<div class="formholder">
+								<input type="text" name="userid" placeholder="HKUST Username">
+							</div>
+							<div class="formholder">
+								<input type="password" name="password" placeholder="Password">
+							</div>
+							<button id="login" type="submit" value="Login">
+							Login
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script>
+			var main = function() {
+	$('.login-button').toggle(function() {
+		$('.login-panel').animate({
+			top: '101px'}, 200);
+		},
+		function() {
+		$('.login-panel').animate({
+			top: '-250px'}, 200);
+		});
+};
+   
+
+$(document).ready(main);
+		</script>
+	</body>
+</html>	
